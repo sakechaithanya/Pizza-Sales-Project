@@ -10,6 +10,7 @@ A complete **end‑to‑end SQL portfolio project** that builds a small “Pizza
 | `pizza_types`   | Flavour/category metadata | `pizza_type_id` (PK), `name`, `category`                    |
 
 📈 Business questions answered
+
 1.Total orders placed
 
 2.Total revenue generated
