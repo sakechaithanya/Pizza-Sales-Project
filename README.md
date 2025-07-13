@@ -2,65 +2,37 @@
 🍕 Pizza Sales SQL Analysis Project
 
 A complete **end‑to‑end SQL portfolio project** that builds a small “Pizza Hut” data mart, explores the data with window functions & CTEs, and answers 15+ business questions about revenue, order patterns, and menu performance.
-🗄️  Schema overview
+| Table           | Purpose                   | Key columns                                                 |
+| --------------- | ------------------------- | ----------------------------------------------------------- |
+| `orders`        | Order header              | `order_id` (PK), `order_date`, `order_time`                 |
+| `order_details` | Line items                | `order_details_id` (PK), `order_id`, `pizza_id`, `quantity` |
+| `pizzas`        | Menu items & prices       | `pizza_id` (PK), `pizza_type_id`, `size`, `price`           |
+| `pizza_types`   | Flavour/category metadata | `pizza_type_id` (PK), `name`, `category`                    |
 
-Table
+📈 Business questions answered
+1.Total orders placed
 
-Purpose
+2.Total revenue generated
 
-Key columns
+3.Highest‑priced pizza
 
-orders
+4.Most common pizza size
 
-Order header
+5.Top 5 pizzas by quantity
 
-order_id (PK), order_date, order_time
+6.Quantity by category
 
-order_details
+7.Orders by hour of day
 
-Line items
+8.Avg pizzas per day
 
-order_details_id (PK), order_id, pizza_id, quantity
+9.Top 3 pizzas by revenue
 
-pizzas
+10.% revenue by type
 
-Menu items & prices
+11.Cumulative revenue timeline
 
-pizza_id (PK), pizza_type_id, size, price
-
-pizza_types
-
-Flavour/category metadata
-
-pizza_type_id (PK), name, category
-
-A convenience fact table pizza_sales (built in 00_setup_fact_table.sql) joins the four bases.
-
-📈  Business questions answered
-
-Total orders placed
-
-Total revenue generated
-
-Highest‑priced pizza
-
-Most common pizza size
-
-Top 5 pizzas by quantity
-
-Quantity by category
-
-Orders by hour of day
-
-Avg pizzas per day
-
-Top 3 pizzas by revenue
-
-% revenue by type
-
-Cumulative revenue timeline
-
-Top 3 pizzas within each category (dense_rank)
+12.Top 3 pizzas within each category (dense_rank)
 
 KPI suite: total revenue, AOV, pizzas sold, etc.
 
